@@ -1,4 +1,5 @@
-Summary:	commons validator
+Summary:	commons-validator - framework to define validators
+Summary(pl):	commons-validator - szkielet do definiowania metod kontroluj±cych poprawno¶æ
 Name:		jakarta-commons-validator
 Version:	1.0.2
 Release:	0.1
@@ -16,7 +17,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_javalibdir	%{_datadir}/java
 
 %description
-Jakarta Commons Validator
+The commons-validator package provides a simple, extendable framework
+to define validators (validation methods) and validation rules in an
+XML file. There is support for internationalization of validation
+rules and error messages.
+
+%description -l pl
+Pakiet commons-validator udostêpnia prosty, rozszerzalny szkielet do
+definiowania "validatorów" (metod kontroluj±cych poprawno¶æ danych),
+oraz regu³ okre¶laj±cych poprawno¶æ w pliku XML. Pakiet obs³uguje
+zlokalizowane regu³y poprawno¶ci oraz komunikaty b³êdów.
+
 %prep
 %setup -q -n commons-validator-%{version}-src
 
