@@ -9,7 +9,9 @@ Source0:	http://www.apache.org/dist/jakarta/commons/validator/source/commons-val
 Group:		Development/Languages/Java
 URL:		http://jakarta.apache.org/commons/validator/
 BuildRequires:	jakarta-ant >= 1.5
+BuildRequires:	jakarta-commons-digester
 BuildRequires:	jakarta-oro
+Requires:	jakarta-commons-digester
 Requires:	jakarta-oro
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
