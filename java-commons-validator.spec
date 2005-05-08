@@ -1,22 +1,24 @@
 Summary:	commons-validator - framework to define validators
 Summary(pl):	commons-validator - szkielet do definiowania metod kontroluj±cych poprawno¶æ
 Name:		jakarta-commons-validator
-Version:	1.0.2
-Release:	0.1
-License:	Apache License
-Source0:	http://www.apache.org/dist/jakarta/commons/validator/source/commons-validator-%{version}-src.tar.gz
-# Source0-md5:	917cf3d82847e497e11f9e86488d4b56
+Version:	1.1.4
+Release:	1
+License:	Apache v2.0
 Group:		Development/Languages/Java
+Source0:	http://www.apache.org/dist/jakarta/commons/validator/source/commons-validator-%{version}-src.tar.gz
+# Source0-md5:	6a4ef07da77dd86223e80870999448e8
+Patch0:		%{name}-files.patch
 URL:		http://jakarta.apache.org/commons/validator/
 BuildRequires:	jakarta-ant >= 1.5
+BuildRequires:	jakarta-commons-beanutils
+BuildRequires:	jakarta-commons-collections
 BuildRequires:	jakarta-commons-digester
+BuildRequires:	jakarta-commons-logging
 BuildRequires:	jakarta-oro
 Requires:	jakarta-commons-digester
 Requires:	jakarta-oro
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_javalibdir	%{_datadir}/java
 
 %description
 The commons-validator package provides a simple, extendable framework
@@ -31,23 +33,27 @@ oraz regu³ okre¶laj±cych poprawno¶æ w pliku XML. Pakiet obs³uguje
 zlokalizowane regu³y poprawno¶ci oraz komunikaty b³êdów.
 
 %prep
-%setup -q -n commons-validator-%{version}-src
+%setup -q -n commons-validator-%{version}
+%patch0 -p1
 
 %build
-ant \
-    -Doro.jar=%{_javalibdir}/oro.jar \
-    dist
+ant dist \
+	-Dcommons-beanutils.jar=%{_javadir}/commons-beanutils.jar \
+	-Dcommons-collections.jar=%{_javadir}/commons-collections.jar \
+	-Dcommons-digester.jar=%{_javadir}/commons-digester.jar \
+	-Dcommons-logging.jar=%{_javadir}/commons-logging.jar \
+	-Doro.jar=%{_javadir}/oro.jar
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_javadir}
 
-install -d $RPM_BUILD_ROOT%{_javalibdir}
-cp dist/*.jar $RPM_BUILD_ROOT%{_javalibdir}
+install dist/*.jar $RPM_BUILD_ROOT%{_javadir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc dist/docs/api dist/LICENSE.txt
-%{_javalibdir}/*.jar
+%doc LICENSE.txt dist/docs/api
+%{_javadir}/*.jar
