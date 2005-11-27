@@ -1,13 +1,12 @@
 Summary:	commons-validator - framework to define validators
 Summary(pl):	commons-validator - szkielet do definiowania metod kontroluj±cych poprawno¶æ
 Name:		jakarta-commons-validator
-Version:	1.1.4
+Version:	1.2.0
 Release:	1
 License:	Apache v2.0
 Group:		Development/Languages/Java
 Source0:	http://www.apache.org/dist/jakarta/commons/validator/source/commons-validator-%{version}-src.tar.gz
-# Source0-md5:	6a4ef07da77dd86223e80870999448e8
-Patch0:		%{name}-files.patch
+# Source0-md5:	984074a3707c4a366f0b08db88d41e4d
 URL:		http://jakarta.apache.org/commons/validator/
 BuildRequires:	jakarta-ant >= 1.5
 BuildRequires:	jakarta-commons-beanutils
@@ -34,7 +33,6 @@ zlokalizowane regu³y poprawno¶ci oraz komunikaty b³êdów.
 
 %prep
 %setup -q -n commons-validator-%{version}
-%patch0 -p1
 
 %build
 ant dist \
