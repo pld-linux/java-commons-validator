@@ -8,7 +8,7 @@ Group:		Development/Languages/Java
 Source0:	http://www.apache.org/dist/jakarta/commons/validator/source/commons-validator-%{version}-src.tar.gz
 # Source0-md5:	984074a3707c4a366f0b08db88d41e4d
 URL:		http://jakarta.apache.org/commons/validator/
-BuildRequires:	jakarta-ant >= 1.5
+BuildRequires:	ant >= 1.5
 BuildRequires:	jakarta-commons-beanutils
 BuildRequires:	jakarta-commons-collections
 BuildRequires:	jakarta-commons-digester
