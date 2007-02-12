@@ -1,5 +1,5 @@
 Summary:	commons-validator - framework to define validators
-Summary(pl):	commons-validator - szkielet do definiowania metod kontroluj±cych poprawno¶æ
+Summary(pl.UTF-8):   commons-validator - szkielet do definiowania metod kontrolujÄ…cych poprawnoÅ›Ä‡
 Name:		jakarta-commons-validator
 Version:	1.2.0
 Release:	1
@@ -25,11 +25,11 @@ to define validators (validation methods) and validation rules in an
 XML file. There is support for internationalization of validation
 rules and error messages.
 
-%description -l pl
-Pakiet commons-validator udostêpnia prosty, rozszerzalny szkielet do
-definiowania "validatorów" (metod kontroluj±cych poprawno¶æ danych),
-oraz regu³ okre¶laj±cych poprawno¶æ w pliku XML. Pakiet obs³uguje
-zlokalizowane regu³y poprawno¶ci oraz komunikaty b³êdów.
+%description -l pl.UTF-8
+Pakiet commons-validator udostÄ™pnia prosty, rozszerzalny szkielet do
+definiowania "validatorÃ³w" (metod kontrolujÄ…cych poprawnoÅ›Ä‡ danych),
+oraz reguÅ‚ okreÅ›lajÄ…cych poprawnoÅ›Ä‡ w pliku XML. Pakiet obsÅ‚uguje
+zlokalizowane reguÅ‚y poprawnoÅ›ci oraz komunikaty bÅ‚Ä™dÃ³w.
 
 %prep
 %setup -q -n commons-validator-%{version}
