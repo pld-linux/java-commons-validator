@@ -1,5 +1,5 @@
 Summary:	commons-validator - framework to define validators
-Summary(pl.UTF-8):   commons-validator - szkielet do definiowania metod kontrolujących poprawność
+Summary(pl.UTF-8):	commons-validator - szkielet do definiowania metod kontrolujących poprawność
 Name:		jakarta-commons-validator
 Version:	1.2.0
 Release:	1
