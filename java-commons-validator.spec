@@ -42,6 +42,9 @@ Requires:	jpackage-utils
 %description javadoc
 Documentation for %{name}.
 
+%description javadoc -l pl.UTF-8
+Dokumentacja online do %{name}.
+
 %prep
 %setup -q -n commons-validator-%{version}
 
