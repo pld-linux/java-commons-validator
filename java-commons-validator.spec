@@ -49,7 +49,7 @@ Dokumentacja online do %{name}.
 %setup -q -n commons-validator-%{version}
 
 %build
-required_jars="commons-beanutils commons-collections commons-digester commons-logging oro"
+required_jars="commons-beanutils-core commons-collections commons-digester commons-logging oro"
 export CLASSPATH=$(/usr/bin/build-classpath $required_jars)
 %ant dist
 
