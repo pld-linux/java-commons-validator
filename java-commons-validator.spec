@@ -1,23 +1,24 @@
 Summary:	commons-validator - framework to define validators
 Summary(pl.UTF-8):	commons-validator - szkielet do definiowania metod kontrolujących poprawność
-Name:		jakarta-commons-validator
+Name:		java-commons-validator
 Version:	1.2.0
 Release:	1
 License:	Apache v2.0
 Group:		Development/Languages/Java
-Source0:	http://www.apache.org/dist/jakarta/commons/validator/source/commons-validator-%{version}-src.tar.gz
+Source0:	http://www.apache.org/dist/commons/validator/source/commons-validator-%{version}-src.tar.gz
 # Source0-md5:	984074a3707c4a366f0b08db88d41e4d
-URL:		http://jakarta.apache.org/commons/validator/
+URL:		http://commons.apache.org/validator/
 BuildRequires:	ant >= 1.5
-BuildRequires:	jakarta-commons-beanutils
-BuildRequires:	jakarta-commons-collections
-BuildRequires:	jakarta-commons-digester
-BuildRequires:	jakarta-commons-logging
 BuildRequires:	jakarta-oro
+BuildRequires:	java-commons-beanutils
+BuildRequires:	java-commons-collections
+BuildRequires:	java-commons-digester
+BuildRequires:	java-commons-logging
 BuildRequires:	jpackage-utils
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	jakarta-commons-digester
 Requires:	jakarta-oro
+Requires:	java-commons-digester
+Obsoletes:	jakarta-commons-validator
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,7 +51,7 @@ Dokumentacja online do %{name}.
 
 %build
 required_jars="commons-beanutils-core commons-collections commons-digester commons-logging oro"
-export CLASSPATH=$(/usr/bin/build-classpath $required_jars)
+export CLASSPATH=$(%{_bindir}/build-classpath $required_jars)
 %ant dist
 
 %install
