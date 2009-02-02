@@ -4,7 +4,7 @@ Name:		java-commons-validator
 Version:	1.2.0
 Release:	1
 License:	Apache v2.0
-Group:		Development/Languages/Java
+Group:		Libraries/Java
 Source0:	http://www.apache.org/dist/commons/validator/source/commons-validator-%{version}-src.tar.gz
 # Source0-md5:	984074a3707c4a366f0b08db88d41e4d
 URL:		http://commons.apache.org/validator/
