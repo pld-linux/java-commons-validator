@@ -9,15 +9,16 @@ Source0:	http://www.apache.org/dist/commons/validator/source/commons-validator-%
 # Source0-md5:	984074a3707c4a366f0b08db88d41e4d
 URL:		http://commons.apache.org/validator/
 BuildRequires:	ant >= 1.5
-BuildRequires:	jakarta-oro
 BuildRequires:	java-commons-beanutils
 BuildRequires:	java-commons-collections
 BuildRequires:	java-commons-digester
 BuildRequires:	java-commons-logging
+BuildRequires:	java-oro
+BuildRequires:	jdk
 BuildRequires:	jpackage-utils
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	jakarta-oro
 Requires:	java-commons-digester
+Requires:	java-oro
 Obsoletes:	jakarta-commons-validator
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
