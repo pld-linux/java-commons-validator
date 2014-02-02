@@ -2,7 +2,7 @@ Summary:	commons-validator - framework to define validators
 Summary(pl.UTF-8):	commons-validator - szkielet do definiowania metod kontrolujących poprawność
 Name:		java-commons-validator
 Version:	1.2.0
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries/Java
 Source0:	http://www.apache.org/dist/commons/validator/source/commons-validator-%{version}-src.tar.gz
